@@ -1,14 +1,14 @@
 <html>
     <head>
         <!-- jQuery --> 
-        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
         <!-- jQuery --> 
-        <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
-        <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.js"></script>
         
         <!-- LeafletJS --> 
-        <script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
-        <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/leaflet.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/leaflet.css" />
         <link rel="stylesheet" href="./css/style.css" />
 
         <!-- Leaflet.AffineImage --> 
@@ -27,7 +27,7 @@
                     L.affineImage().params({image:image,boundingScale:0.5}).addTo(map);
                     
                     //Adding marker
-                    L.marker([-34.6,-58.383],{draggable: true}).addTo(map);
+                    //L.marker([-34.6,-58.383],{draggable: true}).addTo(map);
 
                 };
 
@@ -42,9 +42,7 @@
                 var tileUrl = 'http://{s}.tile.osm.org/{z}/{x}/{y}.png';
                 var tileAttrib = // Rule #2: Give credit where it's due.
                     '&copy; <a href="http://www.openstreetmap.org/">OpenStreetMap</a> ' +
-                    'contributors, CC-BY-SA, Tiles Courtesy of ' +
-                    '<a href="http://developer.mapquest.com/web/products/open/map">' +
-                    'MapQuest</a>';
+                    'contributors';
                 var tiles = new L.TileLayer(
                     tileUrl,
                     {maxZoom: 17, attribution: tileAttrib}
