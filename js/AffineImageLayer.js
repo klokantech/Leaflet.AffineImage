@@ -156,7 +156,18 @@ L.AffineImage = L.Class.extend({
         ctx.drawImage(image, 0,0);
 
         ctx.restore();
-
+        
+        ll1 = resizers[0].getLatLng();
+        ll2 = resizers[1].getLatLng();
+        ll3 = resizers[2].getLatLng();
+        
+        var cmd = [''];
+        cmd.push('Copy&paste into MapTiler under "Geographical location" -> "Corner points" (or use after -cornerpoints):\n');
+        cmd.push('\n');
+        cmd.push(ll1.lng, ll1.lat);
+        cmd.push(ll2.lng, ll2.lat);
+        cmd.push(ll3.lng, ll3.lat);
+        document.getElementById('code').innerText = cmd.join(' ');
     },
 
     _addResizers: function() {
