@@ -162,7 +162,7 @@ L.AffineImage = L.Class.extend({
         ll3 = resizers[2].getLatLng();
         
         var cmd = [''];
-        cmd.push('Copy&paste into MapTiler under "Geographical location" -> "Corner points" (or use after -cornerpoints):\n');
+        cmd.push('Copy&paste into MapTiler under "Geographical location" -> "Corners" (or use after -corners):\n');
         cmd.push('\n');
         cmd.push(ll1.lng, ll1.lat);
         cmd.push(ll2.lng, ll2.lat);
